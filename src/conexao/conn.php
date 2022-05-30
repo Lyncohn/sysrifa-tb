@@ -2,8 +2,8 @@
 
     //Carregar as credenciais do banco de dados
 
-    $hostname = "";
+    $hostname = "sql113.epizy.com";
     $database = "";
-    $user = "";
+    $user = "epiz_31448286";
     $password ="";
 ?>
