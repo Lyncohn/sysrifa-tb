@@ -13,6 +13,9 @@ $(document).ready(function() {
         //Incluir nosso formulário dentro do corpo da nossa janela modal
         $('.modal-body').load('src/tipo/visao/form-tipo.html')
 
+        //Iremos incluir uma funçãoi no botão salvar para demonstrar um novo registro
+        $('.btn-salvar').attr('data-operation', 'insert')
+
         //Abrir a janela modal
         $('#modal-tipo').modal('show')
     })
