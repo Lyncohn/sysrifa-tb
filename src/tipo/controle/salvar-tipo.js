@@ -21,7 +21,7 @@ $(document).ready(function() {
                     confirmButtonText: 'OK'
                 })
 
-                $('#modal-tipo').moldal('hide')
+                $('#modal-tipo').modal('hide')
             }
         })
 
