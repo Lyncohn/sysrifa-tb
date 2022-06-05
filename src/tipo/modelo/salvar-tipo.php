@@ -9,13 +9,13 @@
     if(empty($requestData['NOME'])){
         //Caso a variavel vier vazia, retornar erro
         $dados = array(
-            "tipo" => 'erro',
+            "tipo" => 'error',
             "mensagem" => 'Existem campos obrigatórios não preenchidos.'
         );
     } else{
     //Caso os campos vierem preenchidos, realizar o cadastro
         $ID = isset($requestData['ID']) ? $requestData['ID'] : '';
-        $operacao = isset($requestData['operacao]']) ? $requestData['operacao'] : '';
+        $operacao = isset($requestData['operacao']) ? $requestData['operacao'] : '';
     
     // Verificação  para cadastro ou realização de registro
         if($operacao == 'insert') {
