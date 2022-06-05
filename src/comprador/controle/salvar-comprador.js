@@ -21,7 +21,7 @@ $(document).ready(function() {
                     confirmButtonText: 'OK'
                 })
 
-                $('#modal-tipo').modal('hide')
+                $('#modal-comprador').modal('hide')
             }
         })
 
