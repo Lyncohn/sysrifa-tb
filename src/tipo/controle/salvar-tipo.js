@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.btn-salvar').click(function (e) {
+    $('.btn-salvar').click(function (e){
         e.preventDefault()
 
         let dados = $('#form-tipo').seriaize()
@@ -9,7 +9,7 @@ $(document).ready(function() {
     
         $.ajax({
             type: 'POST',
-            dataType: 'json',
+            dataType: 'JSON',
             assync: true,
             data: dados,
             url: 'src/tipo/modelo/salvar-tipo.php',
