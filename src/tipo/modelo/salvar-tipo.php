@@ -9,7 +9,7 @@
     if(empty($requestData['NOME'])){
         //Caso a variavel vier vazia, retornar erro
         $dados = array(
-            "tipo" => 'error',
+            "tipo" => 'erro',
             "mensagem" => 'Existem campos obrigatórios não preenchidos.'
         );
     } else{
@@ -26,7 +26,7 @@
                     ':a' => utf8_decode($requestData['NOME'])
                 ));
                 $dados = array(
-                    "tipo" => 'sucesso',
+                    "tipo" => 'success',
                     "mensagem" => 'Registro salvo com sucesso.'
                 );
             } catch (PDOException $e) {
@@ -44,7 +44,7 @@
                     ':a' => utf8_decode($requestData['NOME'])
                 ));
                 $dados = array(
-                    "tipo" => 'sucesso',
+                    "tipo" => 'success',
                     "mensagem" => 'Registro atualizado com sucesso.'
                 );
             } catch (PDOException $e) {
