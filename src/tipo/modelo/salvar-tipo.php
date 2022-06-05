@@ -38,7 +38,7 @@
         } else {
             //Se a nossa operação vier vazia, realizar UPDATE
             try {
-                $stmt = $pdo->prepare('UPDATE TIPO SET (NOME) : :a WHERE ID = :id');
+                $stmt = $pdo->prepare('UPDATE TIPO SET NOME = :a WHERE ID = :id');
                 $stmt->execute(array(
                     ':id' => $ID,
                     ':a' => utf8_decode($requestData['NOME'])
