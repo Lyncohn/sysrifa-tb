@@ -4,7 +4,7 @@
 
     $ID = $_REQUEST['ID'];
 
-    $SQL = " DELETE FROM TIPO WHERE ID = $ID";
+    $sql = "DELETE FROM TIPO WHERE ID = $ID";
 
     $resultado = $pdo->query($sql);
 
@@ -20,4 +20,4 @@
         );
     }
 
-    json_encode($dados);
+    echo json_encode($dados);

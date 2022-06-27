@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#table-tipo').on('click', 'button.btn-view', function(e) {
+    $('#table-tipo').on('click', 'button.btn-edit', function(e) {
         e.preventDefault();
 
         //Limpar todas as informações já existentes em nossa modal
@@ -7,7 +7,7 @@ $(document).ready(function(){
         $('.modal-body').empty()
 
         //Incluir novos textos no cabeçalho da minha janela modal
-        $('.modal-title').append('Visualizar registro')
+        $('.modal-title').append('Editar registro')
 
         let ID = `ID=${$(this).attr('id')}`
 
@@ -21,9 +21,9 @@ $(document).ready(function(){
                 if(dado.tipo == 'success'){
                     $('.modal-body').load('src/tipo/visao/form-tipo.html', function() {
                         $('#NOME').val(dado.dados.NOME)
-                        $('#NOME').attr('readyonly', 'true')
+                        $('#ID').val(dado.dados.ID)
                     })
-                    $('.btn-salvar').hide()
+                    $('.btn-salvar').show()
                     $('#modal-tipo').modal('show')
                 }else {
                     Swal.fire({
